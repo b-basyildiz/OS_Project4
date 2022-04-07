@@ -22,7 +22,8 @@ public:
     //  Member variables
     //==================================================
 
-    // TODO: Add any member variables you may need.
+    // MY CODE
+    Stable_Priority_Queue<std::shared_ptr<Thread>> queue; //queue of threads
 
     //==================================================
     //  Member functions

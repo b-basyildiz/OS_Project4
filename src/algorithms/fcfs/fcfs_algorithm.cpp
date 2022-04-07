@@ -3,6 +3,8 @@
 #include <cassert>
 #include <stdexcept>
 #include "utilities/stable_priority_queue/stable_priority_queue.hpp"
+#include <string>
+#include <sstream>
 
 #define FMT_HEADER_ONLY
 #include "utilities/fmt/format.h"
@@ -22,17 +24,21 @@ std::shared_ptr<SchedulingDecision> FCFSScheduler::get_next_thread() {
         if(queue.size() != 0){
             std::shared_ptr<SchedulingDecision> next;
             next->thread = queue.top(); 
-            queue.pop();
-            std::cout << "Selected from " << queue.size() << " threads. Will run to completion of burst." << std::endl;  
+            std::ostringstream oss;
+            oss << "Selected from " << queue.size() << " threads. Will run to completion of burst.";
+            next->explanation = oss.str();
+            queue.pop();   
             return next;
         }else{
-            std::cerr << "No threads available for scheduling" << std::endl;
-            return(NULL); 
+            //std::cerr << "No threads available for scheduling" << std::endl;
+            //return(NULL); 
+            throw("No threads available for scheduling"); 
         }
 }
 
 void FCFSScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
-        queue.push(-1,thread); 
+        order = order + 1;
+        queue.push(order,thread); 
 }
 
 size_t FCFSScheduler::size() const {
