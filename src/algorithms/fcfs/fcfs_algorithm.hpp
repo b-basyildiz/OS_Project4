@@ -3,6 +3,8 @@
 
 #include <memory>
 #include "algorithms/scheduling_algorithm.hpp"
+#include "utilities/stable_priority_queue/stable_priority_queue.hpp"
+#include "utilities/fmt/format.h"
 
 /*
     FCFSScheduler:
@@ -22,6 +24,7 @@ public:
     //==================================================
 
     // TODO: Add any member variables you may need.
+    Stable_Priority_Queue<std::shared_ptr<Thread>> queue; 
 
     //==================================================
     //  Member functions
