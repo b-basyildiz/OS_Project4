@@ -1,0 +1,787 @@
+53c53
+<     Thread 3 in process 740 [NORMAL]
+---
+>     Thread 1 in process 740 [NORMAL]
+63c63
+<     Thread 3 in process 740 [NORMAL]
+---
+>     Thread 1 in process 740 [NORMAL]
+66c66
+< At time 163:
+---
+> At time 146:
+68c68
+<     Thread 3 in process 740 [NORMAL]
+---
+>     Thread 1 in process 740 [NORMAL]
+71c71
+< At time 163:
+---
+> At time 146:
+76c76
+< At time 182:
+---
+> At time 161:
+78c78
+<     Thread 3 in process 740 [NORMAL]
+---
+>     Thread 1 in process 740 [NORMAL]
+81c81
+< At time 198:
+---
+> At time 181:
+86c86
+< At time 204:
+---
+> At time 187:
+91c91
+< At time 204:
+---
+> At time 187:
+96c96
+< At time 207:
+---
+> At time 190:
+101c101
+< At time 221:
+---
+> At time 204:
+106c106
+< At time 221:
+---
+> At time 204:
+108c108
+<     Thread 1 in process 740 [NORMAL]
+---
+>     Thread 0 in process 740 [NORMAL]
+111c111
+< At time 227:
+---
+> At time 210:
+116c116
+< At time 242:
+---
+> At time 225:
+121c121
+< At time 256:
+---
+> At time 239:
+123c123
+<     Thread 1 in process 740 [NORMAL]
+---
+>     Thread 0 in process 740 [NORMAL]
+126c126
+< At time 260:
+---
+> At time 255:
+128c128
+<     Thread 1 in process 740 [NORMAL]
+---
+>     Thread 0 in process 740 [NORMAL]
+131c131
+< At time 260:
+---
+> At time 255:
+133c133
+<     Thread 2 in process 740 [NORMAL]
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+136,141c136
+< At time 263:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 2 in process 740 [NORMAL]
+<     Transitioned from READY to RUNNING
+< 
+< At time 275:
+---
+> At time 270:
+143c138
+<     Thread 1 in process 740 [NORMAL]
+---
+>     Thread 0 in process 740 [NORMAL]
+146c141,146
+< At time 291:
+---
+> At time 290:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 2 in process 642 [INTERACTIVE]
+>     Transitioned from READY to RUNNING
+> 
+> At time 304:
+148c148
+<     Thread 2 in process 740 [NORMAL]
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+151c151
+< At time 291:
+---
+> At time 304:
+153c153
+<     Thread 0 in process 740 [NORMAL]
+---
+>     Thread 3 in process 740 [NORMAL]
+156,158c156,163
+< At time 294:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 0 in process 740 [NORMAL]
+---
+> At time 330:
+>     IO_BURST_COMPLETED
+>     Thread 2 in process 642 [INTERACTIVE]
+>     Transitioned from BLOCKED to READY
+> 
+> At time 339:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 3 in process 740 [NORMAL]
+161c166
+< At time 310:
+---
+> At time 360:
+163c168
+<     Thread 0 in process 740 [NORMAL]
+---
+>     Thread 3 in process 740 [NORMAL]
+166c171
+< At time 310:
+---
+> At time 360:
+169c174
+<     Selected from 5 threads. Will run to completion of burst.
+---
+>     Selected from 6 threads. Will run to completion of burst.
+171c176
+< At time 313:
+---
+> At time 363:
+176,181c181
+< At time 315:
+<     IO_BURST_COMPLETED
+<     Thread 2 in process 740 [NORMAL]
+<     Transitioned from BLOCKED to READY
+< 
+< At time 325:
+---
+> At time 379:
+183c183
+<     Thread 0 in process 740 [NORMAL]
+---
+>     Thread 3 in process 740 [NORMAL]
+186c186
+< At time 334:
+---
+> At time 384:
+191c191
+< At time 334:
+---
+> At time 384:
+193c193
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 3 in process 740 [NORMAL]
+196c196,211
+< At time 369:
+---
+> At time 387:
+>     THREAD_DISPATCH_COMPLETED
+>     Thread 3 in process 740 [NORMAL]
+>     Transitioned from READY to RUNNING
+> 
+> At time 392:
+>     THREAD_COMPLETED
+>     Thread 3 in process 740 [NORMAL]
+>     Transitioned from RUNNING to EXIT
+> 
+> At time 392:
+>     DISPATCHER_INVOKED
+>     Thread 0 in process 642 [INTERACTIVE]
+>     Selected from 5 threads. Will run to completion of burst.
+> 
+> At time 427:
+201c216
+< At time 391:
+---
+> At time 449:
+206c221
+< At time 391:
+---
+> At time 449:
+209c224
+<     Selected from 5 threads. Will run to completion of burst.
+---
+>     Selected from 4 threads. Will run to completion of burst.
+211c226
+< At time 411:
+---
+> At time 469:
+216c231
+< At time 426:
+---
+> At time 484:
+221c236
+< At time 450:
+---
+> At time 508:
+226c241
+< At time 450:
+---
+> At time 508:
+228,229c243,244
+<     Thread 2 in process 642 [INTERACTIVE]
+<     Selected from 5 threads. Will run to completion of burst.
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+>     Selected from 4 threads. Will run to completion of burst.
+231c246
+< At time 472:
+---
+> At time 530:
+236c251
+< At time 485:
+---
+> At time 543:
+238c253
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+241c256
+< At time 499:
+---
+> At time 557:
+243c258
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+246c261
+< At time 499:
+---
+> At time 557:
+248,249c263,269
+<     Thread 3 in process 740 [NORMAL]
+<     Selected from 5 threads. Will run to completion of burst.
+---
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Selected from 4 threads. Will run to completion of burst.
+> 
+> At time 560:
+>     THREAD_DISPATCH_COMPLETED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Transitioned from READY to RUNNING
+251c271
+< At time 525:
+---
+> At time 565:
+253c273
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+256,264c276,279
+< At time 534:
+<     PROCESS_DISPATCH_COMPLETED
+<     Thread 3 in process 740 [NORMAL]
+<     Transitioned from READY to RUNNING
+< 
+< At time 539:
+<     THREAD_COMPLETED
+<     Thread 3 in process 740 [NORMAL]
+<     Transitioned from RUNNING to EXIT
+---
+> At time 586:
+>     CPU_BURST_COMPLETED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Transitioned from RUNNING to BLOCKED
+266c281
+< At time 539:
+---
+> At time 586:
+268,269c283,284
+<     Thread 1 in process 642 [INTERACTIVE]
+<     Selected from 5 threads. Will run to completion of burst.
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+>     Selected from 4 threads. Will run to completion of burst.
+271,273c286,288
+< At time 574:
+<     PROCESS_DISPATCH_COMPLETED
+<     Thread 1 in process 642 [INTERACTIVE]
+---
+> At time 589:
+>     THREAD_DISPATCH_COMPLETED
+>     Thread 0 in process 642 [INTERACTIVE]
+278c293
+<     Thread 1 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+284c299
+<     Selected from 4 threads. Will run to completion of burst.
+---
+>     Selected from 3 threads. Will run to completion of burst.
+286c301
+< At time 623:
+---
+> At time 609:
+290a306,310
+> At time 627:
+>     IO_BURST_COMPLETED
+>     Thread 0 in process 642 [INTERACTIVE]
+>     Transitioned from BLOCKED to READY
+> 
+296c316
+< At time 649:
+---
+> At time 663:
+301c321
+< At time 649:
+---
+> At time 663:
+306c326
+< At time 673:
+---
+> At time 687:
+311c331
+< At time 684:
+---
+> At time 698:
+316c336
+< At time 698:
+---
+> At time 721:
+321c341
+< At time 698:
+---
+> At time 721:
+323c343
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 740 [NORMAL]
+326,331c346
+< At time 701:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 2 in process 642 [INTERACTIVE]
+<     Transitioned from READY to RUNNING
+< 
+< At time 706:
+---
+> At time 729:
+336c351,356
+< At time 730:
+---
+> At time 756:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 2 in process 740 [NORMAL]
+>     Transitioned from READY to RUNNING
+> 
+> At time 770:
+338c358
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 740 [NORMAL]
+341c361
+< At time 730:
+---
+> At time 770:
+343c363
+<     Thread 0 in process 740 [NORMAL]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+346c366
+< At time 743:
+---
+> At time 794:
+348c368
+<     Thread 2 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 740 [NORMAL]
+351c371
+< At time 765:
+---
+> At time 805:
+353c373
+<     Thread 0 in process 740 [NORMAL]
+---
+>     Thread 0 in process 642 [INTERACTIVE]
+356,359c376,379
+< At time 794:
+<     CPU_BURST_COMPLETED
+<     Thread 0 in process 740 [NORMAL]
+<     Transitioned from RUNNING to BLOCKED
+---
+> At time 833:
+>     THREAD_COMPLETED
+>     Thread 0 in process 642 [INTERACTIVE]
+>     Transitioned from RUNNING to EXIT
+361c381
+< At time 794:
+---
+> At time 833:
+366,367c386,387
+< At time 797:
+<     THREAD_DISPATCH_COMPLETED
+---
+> At time 868:
+>     PROCESS_DISPATCH_COMPLETED
+371,376c391
+< At time 802:
+<     IO_BURST_COMPLETED
+<     Thread 0 in process 740 [NORMAL]
+<     Transitioned from BLOCKED to READY
+< 
+< At time 803:
+---
+> At time 874:
+381,396c396
+< At time 803:
+<     DISPATCHER_INVOKED
+<     Thread 1 in process 642 [INTERACTIVE]
+<     Selected from 4 threads. Will run to completion of burst.
+< 
+< At time 838:
+<     PROCESS_DISPATCH_COMPLETED
+<     Thread 1 in process 642 [INTERACTIVE]
+<     Transitioned from READY to RUNNING
+< 
+< At time 868:
+<     CPU_BURST_COMPLETED
+<     Thread 1 in process 642 [INTERACTIVE]
+<     Transitioned from RUNNING to BLOCKED
+< 
+< At time 868:
+---
+> At time 874:
+398c398
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+401,403c401,403
+< At time 871:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+> At time 909:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 2 in process 642 [INTERACTIVE]
+406c406
+< At time 882:
+---
+> At time 938:
+408c408
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+411c411
+< At time 882:
+---
+> At time 938:
+416c416
+< At time 894:
+---
+> At time 951:
+418,423c418
+<     Thread 1 in process 642 [INTERACTIVE]
+<     Transitioned from BLOCKED to READY
+< 
+< At time 909:
+<     IO_BURST_COMPLETED
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+426c421
+< At time 917:
+---
+> At time 973:
+431c426
+< At time 935:
+---
+> At time 1002:
+436c431
+< At time 935:
+---
+> At time 1002:
+439c434
+<     Selected from 3 threads. Will run to completion of burst.
+---
+>     Selected from 2 threads. Will run to completion of burst.
+441c436
+< At time 942:
+---
+> At time 1010:
+446c441
+< At time 970:
+---
+> At time 1037:
+451c446
+< At time 993:
+---
+> At time 1060:
+456c451
+< At time 993:
+---
+> At time 1060:
+458,464c453,454
+<     Thread 0 in process 642 [INTERACTIVE]
+<     Selected from 3 threads. Will run to completion of burst.
+< 
+< At time 996:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 0 in process 642 [INTERACTIVE]
+<     Transitioned from READY to RUNNING
+---
+>     Thread 0 in process 740 [NORMAL]
+>     Selected from 2 threads. Will run to completion of burst.
+466c456
+< At time 1015:
+---
+> At time 1082:
+471c461,466
+< At time 1019:
+---
+> At time 1095:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 0 in process 740 [NORMAL]
+>     Transitioned from READY to RUNNING
+> 
+> At time 1113:
+473c468
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 740 [NORMAL]
+476c471
+< At time 1019:
+---
+> At time 1113:
+478,479c473,474
+<     Thread 0 in process 740 [NORMAL]
+<     Selected from 3 threads. Will run to completion of burst.
+---
+>     Thread 2 in process 642 [INTERACTIVE]
+>     Selected from 2 threads. Will run to completion of burst.
+481c476
+< At time 1027:
+---
+> At time 1120:
+483c478
+<     Thread 0 in process 642 [INTERACTIVE]
+---
+>     Thread 0 in process 740 [NORMAL]
+486c481,496
+< At time 1054:
+---
+> At time 1148:
+>     PROCESS_DISPATCH_COMPLETED
+>     Thread 2 in process 642 [INTERACTIVE]
+>     Transitioned from READY to RUNNING
+> 
+> At time 1167:
+>     THREAD_COMPLETED
+>     Thread 2 in process 642 [INTERACTIVE]
+>     Transitioned from RUNNING to EXIT
+> 
+> At time 1167:
+>     DISPATCHER_INVOKED
+>     Thread 0 in process 740 [NORMAL]
+>     Selected from 2 threads. Will run to completion of burst.
+> 
+> At time 1202:
+491c501
+< At time 1063:
+---
+> At time 1211:
+496c506
+< At time 1063:
+---
+> At time 1211:
+499c509
+<     Selected from 3 threads. Will run to completion of burst.
+---
+>     Selected from 1 threads. Will run to completion of burst.
+501c511
+< At time 1084:
+---
+> At time 1232:
+506c516
+< At time 1098:
+---
+> At time 1246:
+511c521
+< At time 1114:
+---
+> At time 1276:
+516c526
+< At time 1114:
+---
+> At time 1276:
+518,524c528,529
+<     Thread 2 in process 642 [INTERACTIVE]
+<     Selected from 3 threads. Will run to completion of burst.
+< 
+< At time 1117:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 2 in process 642 [INTERACTIVE]
+<     Transitioned from READY to RUNNING
+---
+>     Thread 0 in process 740 [NORMAL]
+>     Selected from 1 threads. Will run to completion of burst.
+526c531
+< At time 1136:
+---
+> At time 1302:
+531,556c536
+< At time 1136:
+<     THREAD_COMPLETED
+<     Thread 2 in process 642 [INTERACTIVE]
+<     Transitioned from RUNNING to EXIT
+< 
+< At time 1136:
+<     DISPATCHER_INVOKED
+<     Thread 0 in process 642 [INTERACTIVE]
+<     Selected from 3 threads. Will run to completion of burst.
+< 
+< At time 1139:
+<     THREAD_DISPATCH_COMPLETED
+<     Thread 0 in process 642 [INTERACTIVE]
+<     Transitioned from READY to RUNNING
+< 
+< At time 1167:
+<     THREAD_COMPLETED
+<     Thread 0 in process 642 [INTERACTIVE]
+<     Transitioned from RUNNING to EXIT
+< 
+< At time 1167:
+<     DISPATCHER_INVOKED
+<     Thread 0 in process 740 [NORMAL]
+<     Selected from 2 threads. Will run to completion of burst.
+< 
+< At time 1202:
+---
+> At time 1311:
+561c541
+< At time 1203:
+---
+> At time 1312:
+566c546
+< At time 1203:
+---
+> At time 1312:
+571c551
+< At time 1227:
+---
+> At time 1336:
+576c556
+< At time 1238:
+---
+> At time 1347:
+581c561
+< At time 1255:
+---
+> At time 1363:
+586c566
+< At time 1255:
+---
+> At time 1363:
+591c571
+< At time 1280:
+---
+> At time 1385:
+596c576
+< At time 1290:
+---
+> At time 1398:
+601c581
+< At time 1311:
+---
+> At time 1419:
+606c586
+< At time 1311:
+---
+> At time 1419:
+611c591
+< At time 1333:
+---
+> At time 1441:
+616c596
+< At time 1346:
+---
+> At time 1454:
+621c601
+< At time 1375:
+---
+> At time 1471:
+626c606
+< At time 1375:
+---
+> At time 1471:
+631c611
+< At time 1391:
+---
+> At time 1496:
+636c616
+< At time 1410:
+---
+> At time 1506:
+641c621
+< At time 1418:
+---
+> At time 1514:
+646c626
+< At time 1418:
+---
+> At time 1514:
+651c631
+< At time 1453:
+---
+> At time 1549:
+656c636
+< At time 1462:
+---
+> At time 1578:
+661c641
+< At time 1482:
+---
+> At time 1594:
+666c646
+< At time 1482:
+---
+> At time 1594:
+671c651
+< At time 1485:
+---
+> At time 1597:
+676c656,676
+< At time 1506:
+---
+> At time 1606:
+>     CPU_BURST_COMPLETED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Transitioned from RUNNING to BLOCKED
+> 
+> At time 1626:
+>     IO_BURST_COMPLETED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Transitioned from BLOCKED to READY
+> 
+> At time 1626:
+>     DISPATCHER_INVOKED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Selected from 1 threads. Will run to completion of burst.
+> 
+> At time 1629:
+>     THREAD_DISPATCH_COMPLETED
+>     Thread 1 in process 642 [INTERACTIVE]
+>     Transitioned from READY to RUNNING
+> 
+> At time 1650:
+681c681
+< At time 1509:
+---
+> At time 1653:
+686c686
+< At time 1509:
+---
+> At time 1653:
+691c691
+< At time 1512:
+---
+> At time 1656:
+696c696
+< At time 1534:
+---
+> At time 1678:

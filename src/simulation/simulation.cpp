@@ -215,6 +215,8 @@ SystemStats Simulation::calculate_statistics() {
     // TODO: Calculate the system statistics
         for(auto process: this->processes){
             for(auto thread: process.second->threads){
+                this->system_stats.service_time += thread->service_time;
+                this->system_stats.io_time += thread->io_time;
                 switch (thread->priority)
                 {
                 case (SYSTEM):
@@ -249,6 +251,10 @@ SystemStats Simulation::calculate_statistics() {
                 this->system_stats.avg_thread_turnaround_times[i] = this->system_stats.avg_thread_turnaround_times[i]/this->system_stats.thread_counts[i];
             }
         }
+        this->system_stats.total_cpu_time = this->system_stats.service_time + this->system_stats.dispatch_time;
+        this->system_stats.total_idle_time = this->system_stats.total_time - (this->system_stats.total_cpu_time);
+        this->system_stats.cpu_utilization = float(this->system_stats.total_cpu_time)/this->system_stats.total_time * 100;
+        this->system_stats.cpu_efficiency = float(this->system_stats.service_time)/this->system_stats.total_time * 100;
     return this->system_stats;
 }
 

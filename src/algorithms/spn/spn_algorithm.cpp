@@ -34,8 +34,8 @@ std::shared_ptr<SchedulingDecision> SPNScheduler::get_next_thread() {
 }
 
 void SPNScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
-    int burst_time = thread->get_next_burst(CPU)->burst_type;
-    queue.push(burst_time,thread); 
+    int time = thread->service_time + thread->io_time;
+    queue.push(time,thread); 
 }
 
 size_t SPNScheduler::size() const {
