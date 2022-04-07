@@ -26,6 +26,7 @@ std::shared_ptr<SchedulingDecision> SPNScheduler::get_next_thread() {
         std::ostringstream oss;
         oss << "Selected from " << queue.size() << " threads. Will run to completion of burst.";
         next->explanation = oss.str();
+        queue.pop();
         return next; 
     }
     else{
@@ -39,6 +40,5 @@ void SPNScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
 }
 
 size_t SPNScheduler::size() const {
-    //TODo: Implement me
-    return 0;
+    return queue.size();
 }

@@ -5,6 +5,7 @@
 #include <queue>
 #include <stdexcept>
 #include "algorithms/scheduling_algorithm.hpp"
+#include "utilities/stable_priority_queue/stable_priority_queue.hpp"
 
 /*
     RRScheduler:
@@ -23,7 +24,9 @@ public:
     //  Member variables
     //==================================================
 
-    // TODO: Add any member variables you may need
+    // MY CODE
+    Stable_Priority_Queue<std::shared_ptr<Thread>> queue; //queue of threads
+    int order = 0; 
 
     //==================================================
     //  Member functions

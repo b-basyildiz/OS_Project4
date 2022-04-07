@@ -30,8 +30,6 @@ std::shared_ptr<SchedulingDecision> FCFSScheduler::get_next_thread() {
             queue.pop();   
             return next;
         }else{
-            //std::cerr << "No threads available for scheduling" << std::endl;
-            //return(NULL); 
             throw("No threads available for scheduling"); 
         }
 }
