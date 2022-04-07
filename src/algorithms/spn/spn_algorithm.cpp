@@ -34,7 +34,8 @@ std::shared_ptr<SchedulingDecision> SPNScheduler::get_next_thread() {
 }
 
 void SPNScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
-    int time = thread->service_time + thread->io_time;
+    //int time = thread->service_time - thread->io_time
+    int time = thread->get_next_burst(CPU)->length; 
     queue.push(time,thread); 
 }
 

@@ -31,8 +31,6 @@ public:
             than zero. The default time slice for all preemptive algorithms should be 3.
     */
     int time_slice = -1;
-    //I ADDED THIS
-    SystemStats stats; 
 
     //==================================================
     //  Member functions
@@ -82,8 +80,6 @@ public:
     */
     virtual ~Scheduler() {}
 
-    //I ADDED THIS 
-    SystemStats const get_stats() {return stats;}; 
 };
 
 #endif

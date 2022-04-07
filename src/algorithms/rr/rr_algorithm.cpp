@@ -14,17 +14,20 @@
 */
 
 RRScheduler::RRScheduler(int slice) {    
-    if(slice < 0 ){
-        throw("Error: Time slice needs to be postive integer");
+    if(slice <= 0 ){
+        //throw("Error: Time slice needs to be postive integer");
+        this->time_slice = 3;
+    }else{
+        this->time_slice = slice; 
     }
-    this->time_slice = slice; 
 }
 
 std::shared_ptr<SchedulingDecision> RRScheduler::get_next_thread() {
     std::shared_ptr<SchedulingDecision> next(new SchedulingDecision);
     if(queue.size() != 0){
         next->thread = queue.top(); 
-        next->explanation = next->explanation = "Selected from " + std::to_string(queue.size()) + " threads. Will run to completion of burst.";
+        next->explanation = next->explanation = "Selected from " + std::to_string(queue.size()) + " threads. Will run for at most " + std::to_string(this->time_slice) + " ticks.";
+        next->time_slice = this->time_slice; 
         queue.pop();
         return next; 
     }
