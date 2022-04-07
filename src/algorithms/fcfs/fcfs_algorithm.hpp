@@ -5,6 +5,7 @@
 #include "algorithms/scheduling_algorithm.hpp"
 #include "utilities/stable_priority_queue/stable_priority_queue.hpp"
 #include "utilities/fmt/format.h"
+#include "types/system_stats/system_stats.hpp"
 
 /*
     FCFSScheduler:
@@ -26,6 +27,7 @@ public:
     // MY CODE
     Stable_Priority_Queue<std::shared_ptr<Thread>> queue; //queue of threads
     int order = 0; //integer time in quick a process comes into the queue 
+
 
     //==================================================
     //  Member functions

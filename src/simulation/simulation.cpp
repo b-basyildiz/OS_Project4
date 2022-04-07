@@ -77,6 +77,7 @@ void Simulation::run() {
 
         this->system_stats.total_time = event->time;
         event.reset();
+
     }
     // We are done!
 
@@ -212,6 +213,42 @@ void Simulation::handle_dispatcher_invoked(const std::shared_ptr<Event> event) {
 
 SystemStats Simulation::calculate_statistics() {
     // TODO: Calculate the system statistics
+        for(auto process: this->processes){
+            for(auto thread: process.second->threads){
+                switch (thread->priority)
+                {
+                case (SYSTEM):
+                    this->system_stats.thread_counts[0] ++;
+                    this->system_stats.avg_thread_response_times[0] += thread->response_time();
+                    this->system_stats.avg_thread_turnaround_times[0] += thread->turnaround_time();
+                    break;
+                case (INTERACTIVE):
+                    this->system_stats.thread_counts[1] ++;
+                    this->system_stats.avg_thread_response_times[1] += thread->response_time();
+                    this->system_stats.avg_thread_turnaround_times[1] += thread->turnaround_time();
+                    break;
+                case (NORMAL):
+                    this->system_stats.thread_counts[2] ++;
+                    this->system_stats.avg_thread_response_times[2] += thread->response_time();
+                    this->system_stats.avg_thread_turnaround_times[2] += thread->turnaround_time();
+                    break;
+                case (BATCH):
+                    this->system_stats.thread_counts[3] ++;
+                    this->system_stats.avg_thread_response_times[3] += thread->response_time();
+                    this->system_stats.avg_thread_turnaround_times[3] += thread->turnaround_time();
+                    break;
+                default:
+                    throw("Error: Thread priority type not recognized");
+                    break;
+                }
+            }
+        }
+        for(int i = 0; i < 4; ++i){
+            if(this->system_stats.thread_counts[i] != 0){
+                this->system_stats.avg_thread_response_times[i] = this->system_stats.avg_thread_response_times[i]/this->system_stats.thread_counts[i];
+                this->system_stats.avg_thread_turnaround_times[i] = this->system_stats.avg_thread_turnaround_times[i]/this->system_stats.thread_counts[i];
+            }
+        }
     return this->system_stats;
 }
 

@@ -20,17 +20,16 @@ SPNScheduler::SPNScheduler(int slice) {
 }
 
 std::shared_ptr<SchedulingDecision> SPNScheduler::get_next_thread() {
+    std::shared_ptr<SchedulingDecision> next(new SchedulingDecision);
     if(queue.size() != 0){
-        std::shared_ptr<SchedulingDecision> next; 
         next->thread = queue.top(); 
-        std::ostringstream oss;
-        oss << "Selected from " << queue.size() << " threads. Will run to completion of burst.";
-        next->explanation = oss.str();
+        next->explanation = next->explanation = "Selected from " + std::to_string(queue.size()) + " threads. Will run to completion of burst.";
         queue.pop();
         return next; 
     }
     else{
-        throw("No threads available for scheduling"); 
+        next->explanation = "No threads available for scheduling";
+        return next;
     }
 }
 
