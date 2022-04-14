@@ -28,7 +28,12 @@ private:
         //  Member variables
         //==================================================
 
-        // TODO: Add any member variables you may need
+        // MY CODE
+        Stable_Priority_Queue<std::shared_ptr<Thread>> s_queue; //queue of threads
+        Stable_Priority_Queue<std::shared_ptr<Thread>> i_queue; //queue of threads
+        Stable_Priority_Queue<std::shared_ptr<Thread>> n_queue; //queue of threads
+        Stable_Priority_Queue<std::shared_ptr<Thread>> b_queue; //queue of threads
+        int orders[4] = {0,0,0,0}; //order of each priority
 
 public:
 

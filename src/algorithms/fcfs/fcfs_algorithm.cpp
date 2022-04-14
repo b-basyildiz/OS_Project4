@@ -33,27 +33,6 @@ std::shared_ptr<SchedulingDecision> FCFSScheduler::get_next_thread() {
 }
 
 void FCFSScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
-        //Priority calculation 
-        /*
-        switch (thread->priority)
-            {
-            case (SYSTEM):
-                this->stats.thread_counts[0] ++;
-                break;
-            case (INTERACTIVE):
-                this->stats.thread_counts[1] ++;
-                break;
-            case (NORMAL):
-                this->stats.thread_counts[2] ++;
-                break;
-            case (BATCH):
-                this->stats.thread_counts[3] ++;
-                break;
-            default:
-                throw("Error: Thread priority type not recognized");
-                break;
-            }
-        */
         order = order + 1;
         queue.push(order,std::move(thread)); 
 }
