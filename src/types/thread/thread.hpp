@@ -31,6 +31,26 @@ public:
     //  Member variables
     //==================================================
 
+    //MY CODE
+    /*
+        queue_num:
+            The number of the MLFQ that the respective thread is in.
+    */
+    int queue_num = 0; 
+
+    /*
+        current_accum:
+            The current time accumlation of a thread within a MLFQ queue.
+    */
+    int current_accum = 0; 
+
+    /*
+        prev_service_time:
+            The service time of the thread previous to its current pre-emption. 
+    */
+    int prev_service_time = 0;
+    //END OF MY CODE
+    
     /*
         thread_id:
             The thread's ID. These are only unique within the context of a process.

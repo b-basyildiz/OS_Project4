@@ -25,6 +25,7 @@ public:
     //==================================================
 
     // TODO: Add any member variables you may need.
+    Stable_Priority_Queue<std::shared_ptr<Thread>> n_queues [10]; //queue of threads
 
     //==================================================
     //  Member functions
