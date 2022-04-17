@@ -33,6 +33,11 @@ public:
 
     //MY CODE
     /*
+        vruntime:
+            The virutal runtime of a given thread (for CFS Scheduler).
+    */
+   int vruntime = 0;
+    /*
         queue_num:
             The number of the MLFQ that the respective thread is in.
     */
