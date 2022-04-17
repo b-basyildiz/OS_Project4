@@ -10,33 +10,58 @@
     Here is where you should define the logic for the MLFQ algorithm.
 */
 
-CFSScheduler::CFSScheduler(int min_granularity) {
-    if(min_granularity < 0){
-        throw("Error: Minimum Granularity must be positive and nonzero!");
+CFSScheduler::CFSScheduler(int slice) {
+    if(slice < 0){
+        this->min_gran = 3;
+        this->time_slice = 3; 
     }else{
-        this->min_gran = min_granularity;
+        this->min_gran = slice;
+        this->time_slice = slice; 
     }
 }
 
 std::shared_ptr<SchedulingDecision> CFSScheduler::get_next_thread() {
         std::shared_ptr<SchedulingDecision> next(new SchedulingDecision);
-        for(int i = 0; i < 10; ++i){
-            if(n_queues[i].size() != 0 ){
-                next->thread = n_queues[i].top(); 
-                int time_slice = pow(2,i);
-                next->time_slice = time_slice;
-                next->explanation = "Selected from queue " ;  
-                this->time_slice = time_slice;
-                n_queues[i].pop();   
-                return next;
+        if(queue.size() != 0){
+            next->thread = queue.top();
+            float sl = 48/float(queue.size());
+            int ts = next->thread->weight/float(weight_sum) * sl;
+            if(ts < this->min_gran){
+                ts = this->min_gran;
             }
+            next->time_slice = ts;
+            this->time_slice = ts;
+            next->explanation = "Selected from " + std::to_string(queue.size()) + " threads (vruntime = " + std::to_string(next->thread->vruntime) + "). Will run for at most " + std::to_string(this->time_slice) + " ticks.";
+            queue.pop();
+            this->weight_sum -= next->thread->weight; 
+            return next;
+        }else{
+            next->explanation = "No threads available for scheduling";
+            return next;
         }
-        next->explanation = "No threads available for scheduling";
-        return next;
 }
 
 void CFSScheduler::add_to_ready_queue(std::shared_ptr<Thread> thread) {
-    queue.push(thread->vruntime, std::move(thread)); 
+        switch (thread->priority)
+        {
+        case SYSTEM:
+            thread->weight = 88761;
+            break;
+        case INTERACTIVE:
+            thread->weight = 29154;
+            break;
+        case NORMAL:
+            thread->weight = 1024;
+            break;
+        case BATCH:
+            thread->weight = 15;
+            break;
+        }
+        if(thread->current_state == READY){
+            weight_sum += thread->weight; 
+        }
+        thread->vruntime = 1024/float(thread->weight) * thread->service_time; 
+        queue.push(thread->vruntime, std::move(thread)); 
 }
 
 size_t CFSScheduler::size() const {

@@ -38,6 +38,11 @@ public:
     */
    int vruntime = 0;
     /*
+        weight:
+            The CFS weight for a given process priority. 
+    */
+   int weight = 0;
+    /*
         queue_num:
             The number of the MLFQ that the respective thread is in.
     */

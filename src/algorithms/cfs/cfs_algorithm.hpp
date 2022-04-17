@@ -25,12 +25,13 @@ public:
     // TODO: Add any member variables you may need.
     Stable_Priority_Queue<std::shared_ptr<Thread>> queue; //queue of threads
     int min_gran = 0;
+    int weight_sum = 0;
 
     //==================================================
     //  Member functions
     //==================================================
 
-    CFSScheduler(int slice = -1);
+    CFSScheduler(int slice = 3);
 
     std::shared_ptr<SchedulingDecision> get_next_thread();
 

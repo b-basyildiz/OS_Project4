@@ -6,6 +6,7 @@
 #include "algorithms/rr/rr_algorithm.hpp"
 #include "algorithms/priority/priority_algorithm.hpp"
 #include "algorithms/mlfq/mlfq_algorithm.hpp"
+#include "algorithms/cfs/cfs_algorithm.hpp"
 // TODO: Include your other algorithms as you make them
 
 #include "simulation/simulation.hpp"
@@ -28,6 +29,8 @@ Simulation::Simulation(FlagOptions flags) {
         this->scheduler = std::make_shared<PRIORITYScheduler>(); 
     } else if (flags.scheduler == "MLFQ"){
         this->scheduler = std::make_shared<MFLQScheduler>(); 
+    }else if (flags.scheduler == "CFS"){
+        this->scheduler = std::make_shared<CFSScheduler>(flags.time_slice);
     }else{
         throw("No scheduler found for " + flags.scheduler);        
     }
